@@ -13,3 +13,7 @@ Dream Projects: Kaluluwa: THe Soul of pop, The Non-comfirming life, Fahreinheit 
 Likes: School life, Going out with Family, Travelling out the country, Looking at the sunset, listening to music, and reading books not in the kindle
 Dislikes: Bullying, Lying, Different or unexpected changes of schedule 
 Dream University: UP Diliman
+//Hello World from VS Code World!!
+
+About me section
+<b> 
