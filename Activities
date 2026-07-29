@@ -13,6 +13,7 @@ For Activity 1
 
 </body>
 </html>
+
 For Activty 2
 <!DOCTYPE html>
 <html lang="en">
@@ -50,6 +51,7 @@ For Activity 3
         <li>UI/UX Design</li>
     </ol>
 </section>
+
 For Activty 4
 <!DOCTYPE html>
 <html lang="en">
@@ -70,6 +72,7 @@ For Activty 4
     </nav>
 </body>
 </html>
+
 For Activty 5
 <!-- START OF PORTFOLIO FORM SECTION -->
 <section id="contact-portfolio" style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif;">
@@ -146,6 +149,7 @@ For Activty 5
     </form>
 </section>
 <!-- END OF PORTFOLIO FORM SECTION -->
+
 For Activity 6-7
 <!DOCTYPE html>
 <html lang="en">
