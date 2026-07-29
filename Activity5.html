@@ -1,0 +1,75 @@
+<!-- START OF PORTFOLIO FORM SECTION -->
+<section id="contact-portfolio" style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif;">
+    <h2>Let's Work Together</h2>
+    <p>Fill out this form to inquire about a project, hire me, or just say hello!</p>
+
+    <form action="#" method="POST">
+        <!-- 1. Text Input -->
+        <div style="margin-bottom: 15px;">
+            <label for="user-name">Full Name: Sofia Alexa M. Ciriaco</label><br>
+            <input type="text" id="user-name" name="userName" placeholder="John Doe" required style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+
+        <!-- 2. Email Input -->
+        <div style="margin-bottom: 15px;">
+            <label for="user-email">Email Address: 2025q0037@pwu.edu.ph</label><br>
+            <input type="email" id="user-email" name="userEmail" placeholder="name@example.com" required style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+
+        <!-- 3. Password Input -->
+        <div style="margin-bottom: 15px;">
+            <label for="form-token">Create a Form Access Token (Password):novastar875902</label><br>
+            <input type="password" id="form-token" name="formToken" placeholder="Enter a secure token" style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+
+        <!-- 4. Radio Buttons -->
+        <div style="margin-bottom: 15px;">
+            <label>Project Budget Group:</label><br>
+            <input type="radio" id="budget-low" name="projectBudget" value="low">
+            <label for="budget-low">Under $1,000</label><br>
+            
+            <input type="radio" id="budget-med" name="projectBudget" value="medium" checked>
+            <label for="budget-med">$1,000 - $5,000</label><br>
+            
+            <input type="radio" id="budget-high" name="projectBudget" value="high">
+            <label for="budget-high">$5,000+</label>
+        </div>
+
+        <!-- 5. Dropdown Menu -->
+        <div style="margin-bottom: 15px;">
+            <label for="service-needed">Service Needed: Learning Support</label><br>
+            <select id="service-needed" name="serviceNeeded" style="width: 100%; padding: 8px; margin-top: 5px;">
+                <option value="web-design">Web Design</option>
+                <option value="frontend-dev">Frontend Development</option>
+                <option value="fullstack-dev">Fullstack Application</option>
+                <option value="consulting">Technical Consulting</option>
+            </select>
+        </div>
+
+        <!-- 6. Checkboxes -->
+        <div style="margin-bottom: 15px;">
+            <label>Preferred Communication Channels:</label><br>
+            <input type="checkbox" id="comm-email" name="channels" value="email" checked>
+            <label for="comm-email">Email</label><br>
+            
+            <input type="checkbox" id="comm-slack" name="channels" value="slack">
+            <label for="comm-slack">Slack / Discord</label><br>
+            
+            <input type="checkbox" id="comm-video" name="channels" value="video">
+            <label for="comm-video">Video Call</label>
+        </div>
+
+        <!-- 7. Textarea -->
+        <div style="margin-bottom: 15px;">
+            <label for="project-details">Project Details / Message:</label><br>
+            <textarea id="project-details" name="projectDetails" rows="5" placeholder="Describe your project goals or message here..." style="width: 100%; padding: 8px; margin-top: 5px; resize: vertical;"></textarea>
+        </div>
+
+        <!-- 8. Submit and Reset Buttons -->
+        <div style="margin-top: 20px;">
+            <input type="submit" value="Send Message" style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; cursor: pointer; border-radius: 4px;">
+            <input type="reset" value="Clear Form" style="padding: 10px 20px; background-color: #6C757D; color: white; border: none; cursor: pointer; border-radius: 4px; margin-left: 10px;">
+        </div>
+    </form>
+</section>
+<!-- END OF PORTFOLIO FORM SECTION -->
