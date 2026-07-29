@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity: JavaScript Art</title>
+    <style>
+        /* --- General Layout --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #242450;
+            color: #b95b5b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            color: #807d7d;
+            margin-bottom: 25px;
+        }
+
+        /* --- Canvas Frame --- */
+        .canvas-container {
+            width: 600px;
+            height: 400px;
+            background: #2d2d2d;
+            border: 4px solid #e66d6d;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            overflow: hidden;
+            transition: background 0.5s ease;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* --- SVG Default Grayscale States --- */
+        #sky { fill: #3a3a3a; transition: fill 0.5s ease; }
+        #sun { fill: #7f7f7f; transition: fill 0.5s ease; }
+        #mountains { fill: #5a5a5a; transition: fill 0.5s ease; }
+        #river { fill: #4a4a4a; transition: fill 0.5s ease; }
+        #grass { fill: #6a6a6a; transition: fill 0.5s ease; }
+        #rock { fill: #404040; transition: fill 0.5s ease; }
+        #house-body { fill: #808080; transition: fill 0.5s ease; }
+        #house-roof { fill: #505050; transition: fill 0.5s ease; }
+        #trees { fill: #555555; transition: fill 0.5s ease; }
+
+        /* --- Button Control Panel --- */
+        .controls {
+            margin-top: 25px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 700px;
+        }
+
+        button {
+            background-color: #090f20;
+            color: rgb(124, 5, 5);
+            border: 2px solid #093366;
+            padding: 10px 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #772533;
+            border-color: #923a48;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* Highlight special modes */
+        .mode-btn {
+            background-color: #0a2547;
+            border-color: #e97d8f;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>MY CHANGING ART USING JAVASCRIPT</h1>
+    <p>Click the buttons below to paint the canvas elements dynamically</p>
+
+    <!-- Interactive Art Canvas Using Inline SVG -->
+    <div class="canvas-container">
+        <svg viewBox="0 0 600 400">
+            <!-- Sky -->
+            <rect id="sky" x="0" y="0" width="600" height="250" />
+            
+            <!-- Sun -->
+            <circle id="sun" cx="500" cy="80" r="40" />
+            
+            <!-- Mountains -->
+            <polygon id="mountains" points="0,250 150,80 300,250 220,250 400,100 550,250" />
+            
+            <!-- Grass/Ground -->
+            <rect id="grass" x="0" y="250" width="600" height="150" />
+            
+            <!-- River -->
+            <path id="river" d="M 250,250 Q 280,300 200,400 L 320,400 Q 380,320 350,250 Z" />
+            
+            <!-- Rock -->
+            <ellipse id="rock" cx="120" cy="340" rx="35" ry="20" />
+            
+            <!-- House -->
+            <g id="house">
+                <rect id="house-body" x="420" y="260" width="80" height="70" />
+                <polygon id="house-roof" points="400,260 460,200 520,260" />
+            </g>
+            
+            <!-- Trees -->
+            <g id="trees">
+                <!-- Tree 1 -->
+                <polygon points="50,270 35,230 65,230" />
+                <polygon points="50,240 40,200 60,200" />
+                <!-- Tree 2 -->
+                <polygon points="550,280 530,240 570,240" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- 9 Functioning Control Buttons -->
+    <div class="controls">
+        <button onclick="colormoon()">Moon</button>
+        <button onclick="colorCities()">Cities</button>
+        <button onclick="colorBuildings()">Buildings</button>
+        <button onclick="colorTrees()">Trees</button>
+        <button onclick="colorHouse()">House</button>
+        <button onclick="colorbridges()">Bridges</button>
+        <button onclick="colorStreams()">Streams</button>
+        <button class="mode-btn" onclick="activateColoredMode()">Colored Mode</button>
+        <button class="mode-btn" onclick="resetToGrayscale()">Default Mode</button>
+    </div>
+
+    <!-- JavaScript Logic Structure -->
+    <script>
+        // 1. Color Moon
+        function colormoon() {
+            document.getElementById("moon").style.fill = "#ffb703";
+            document.getElementById("sky").style.fill = "#a8ded9";
+        }
+
+        // 2. Color Cities
+        function colorCities() {
+            document.getElementById("cities").style.fill = "#52b788";
+        }
+
+        // 3. Color Buildings
+        function colorBuildings() {
+            document.getElementById("buildings").style.fill = "#6c584c";
+        }
+
+        // 4. Color Trees
+        function colorTrees() {
+            document.getElementById("trees").style.fill = "#2d6a4f";
+        }
+
+        // 5. Color House
+        function colorHouse() {
+            document.getElementById("house-body").style.fill = "#ffb703";
+            document.getElementById("house-roof").style.fill = "#e63946";
+        }
+
+        // 6. Color Bridges
+        function colorbridges() {
+            document.getElementById("bridges").style.fill = "#a3b18a";
+        }
+
+        // 7. Color Streams
+        function colorStreams() {
+            document.getElementById("streams").style.fill = "#0077b6";
+        }
+
+        // 8. Colored Mode (Triggers all target colors instantly)
+        function activateColoredMode() {
+            colormoon();
+            colorCities();
+            colorBuildings();
+            colorTrees();
+            colorHouse();
+            colorbridges();
+            colorStreams();
+        }
+
+        // 9. Default Mode (Resets canvas back to complete grayscale)
+        function resetToGrayscale() {
+            document.getElementById("sky").style.fill = "#3a3a3a";
+            document.getElementById("moon").style.fill = "#7f7f7f";
+            document.getElementById("cities").style.fill = "#5a5a5a";
+            document.getElementById("buildings").style.fill = "#4a4a4a";
+            document.getElementById("streams").style.fill = "#6a6a6a";
+            document.getElementById("bridges").style.fill = "#404040";
+            document.getElementById("house-body").style.fill = "#808080";
+            document.getElementById("house-roof").style.fill = "#505050";
+            document.getElementById("trees").style.fill = "#555555";
+        }
+    </script>
+</body>
+</html>
