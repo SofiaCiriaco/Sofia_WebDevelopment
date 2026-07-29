@@ -1,0 +1,287 @@
+For Activity 1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Sofia Alexa M. Ciriaco</title>
+</head>
+<body>
+
+    <h1>Welcome to My Portfolio</h1>
+    <p>I am a passionate web developer focused on creating clean, responsive, and user-friendly digital experiences.</p>
+
+</body>
+</html>
+
+For Activty 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Alex Mercer</title>
+</head>
+<body>
+
+    <h1>Welcome to My Portfolio</h1>
+    <p>I am a passionate web developer focused on creating clean, responsive, and user-friendly digital experiences.</p>
+
+</body>
+</html>
+For Activity 3
+<section id="skills-hobbies">
+    <h2>Skills & Hobbies</h2>
+
+    <!-- Hobbies: Unordered list with customized square bullets -->
+    <h3>My Hobbies</h3>
+    <ul style="list-style-type: square;">
+        <li>Photography</li>
+        <li>Hiking</li>
+        <li>Playing Chess</li>
+        <li>Cooking</li>
+    </ul>
+
+    <!-- Top Skills: Ordered list with customized Roman numeral numbering -->
+    <h3>Top Skills</h3>
+    <ol style="list-style-type: upper-roman;">
+        <li>Web Development</li>
+        <li>Data Analysis</li>
+        <li>Project Management</li>
+        <li>UI/UX Design</li>
+    </ol>
+</section>
+
+For Activty 4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Portfolio - Navigation</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="hobbies.html">Hobbies & Skills</a></li>
+            <li><a href="education.html">Educational Background</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://github.com" target="_blank">Github</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+For Activty 5
+<!-- START OF PORTFOLIO FORM SECTION -->
+<section id="contact-portfolio" style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif;">
+    <h2>Let's Work Together</h2>
+    <p>Fill out this form to inquire about a project, hire me, or just say hello!</p>
+
+    <form action="#" method="POST">
+        <!-- 1. Text Input -->
+        <div style="margin-bottom: 15px;">
+            <label for="user-name">Full Name:</label><br>
+            <input type="text" id="user-name" name="userName" placeholder="John Doe" required style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+
+        <!-- 2. Email Input -->
+        <div style="margin-bottom: 15px;">
+            <label for="user-email">Email Address:</label><br>
+            <input type="email" id="user-email" name="userEmail" placeholder="name@example.com" required style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+
+        <!-- 3. Password Input -->
+        <div style="margin-bottom: 15px;">
+            <label for="form-token">Create a Form Access Token (Password):</label><br>
+            <input type="password" id="form-token" name="formToken" placeholder="Enter a secure token" style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+
+        <!-- 4. Radio Buttons -->
+        <div style="margin-bottom: 15px;">
+            <label>Project Budget Group:</label><br>
+            <input type="radio" id="budget-low" name="projectBudget" value="low">
+            <label for="budget-low">Under $1,000</label><br>
+            
+            <input type="radio" id="budget-med" name="projectBudget" value="medium" checked>
+            <label for="budget-med">$1,000 - $5,000</label><br>
+            
+            <input type="radio" id="budget-high" name="projectBudget" value="high">
+            <label for="budget-high">$5,000+</label>
+        </div>
+
+        <!-- 5. Dropdown Menu -->
+        <div style="margin-bottom: 15px;">
+            <label for="service-needed">Service Needed:</label><br>
+            <select id="service-needed" name="serviceNeeded" style="width: 100%; padding: 8px; margin-top: 5px;">
+                <option value="web-design">Web Design</option>
+                <option value="frontend-dev">Frontend Development</option>
+                <option value="fullstack-dev">Fullstack Application</option>
+                <option value="consulting">Technical Consulting</option>
+            </select>
+        </div>
+
+        <!-- 6. Checkboxes -->
+        <div style="margin-bottom: 15px;">
+            <label>Preferred Communication Channels:</label><br>
+            <input type="checkbox" id="comm-email" name="channels" value="email" checked>
+            <label for="comm-email">Email</label><br>
+            
+            <input type="checkbox" id="comm-slack" name="channels" value="slack">
+            <label for="comm-slack">Slack / Discord</label><br>
+            
+            <input type="checkbox" id="comm-video" name="channels" value="video">
+            <label for="comm-video">Video Call</label>
+        </div>
+
+        <!-- 7. Textarea -->
+        <div style="margin-bottom: 15px;">
+            <label for="project-details">Project Details / Message:</label><br>
+            <textarea id="project-details" name="projectDetails" rows="5" placeholder="Describe your project goals or message here..." style="width: 100%; padding: 8px; margin-top: 5px; resize: vertical;"></textarea>
+        </div>
+
+        <!-- 8. Submit and Reset Buttons -->
+        <div style="margin-top: 20px;">
+            <input type="submit" value="Send Message" style="padding: 10px 20px; background-color: #007BFF; color: white; border: none; cursor: pointer; border-radius: 4px;">
+            <input type="reset" value="Clear Form" style="padding: 10px 20px; background-color: #6C757D; color: white; border: none; cursor: pointer; border-radius: 4px; margin-left: 10px;">
+        </div>
+    </form>
+</section>
+<!-- END OF PORTFOLIO FORM SECTION -->
+
+For Activity 6-7
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Web Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-color: #ca8aeb; 
+        color: #faabe6; 
+        line-height: 1.6;
+            background-color: #120a1c;
+    color: #eeacac; 
+    line-height: 1.6;
+}
+    }
+</style>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>My Creative Portfolio</h1>
+        <p>Hi, I'm Sofia Ciriaco | Awesome Student ready to be a Web Developer & Designer</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="https://media.canva.com/v2/image-resize/format:JPG/height:550/quality:92/uri:ifs%3A%2F%2FM%2Fa579f63b-fe9d-4ede-b136-69020c314799/watermark:F/width:412?csig=AAAAAAAAAAAAAAAAAAAAALbHHBhcmQ07Tyyec34kjx-dgdMXquvaZjO_36Y1SPrV&exp=1784892525&osig=AAAAAAAAAAAAAAAAAAAAABQxCQFneVNPB3ke_NT-pFoptaMXJFGk7V3JNAw-EqMQ&signer=media-rpc&x-canva-quality=thumbnail_large" alt="Profile Picture">
+                <p>Welcome to my personal portfolio! I am a passionate student from PWU-JASMS student that is eager to learn modern web technologies like HTML, CSS, and JavaScript. I enjoy solving problems and turning creative ideas into responsive, functional websites.</p>
+            </div>
+        </section>
+
+        <!-- Educational Background -->
+        <section id="education">
+            <h2>Educational Background</h2>
+            <ul>
+                <li><strong>Elementary:</strong> Wordlab School inc. (Graduated 2015)</li>
+                <li><strong>High School:</strong> Kids World Integrated School Inc. and PWu-JASMS QC (Senior High School) (Graduated 2024)</li>
+                <li><strong>Future College:</strong> UST-Angelicum - BS in Computer Science</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="https://media.canva.com/v2/image-resize/format:JPG/height:550/quality:92/uri:ifs%3A%2F%2FM%2Fb10c04ee-7160-486d-9b6e-f9b38d83fa70/watermark:F/width:366?csig=AAAAAAAAAAAAAAAAAAAAAIjJXwR9kOEaKbC8-Se4IzB5pOhe1_LPsTBvC5i1W_ic&exp=1784894959&osig=AAAAAAAAAAAAAAAAAAAAAPx7oKWEkhwUK_kMEVo51OcCzkJWS1huePYAyhuNkDnb&signer=media-rpc&x-canva-quality=thumbnail_large" alt="Project 1 Thumbnail">
+                    <h3>Project 1: Poster</h3>
+                    <p>A poster of a Biopic movie.</p>
+                </div>
+                <div class="project-card">
+                    <img src="https://media.canva.com/v2/image-resize/format:PNG/height:550/quality:100/uri:ifs%3A%2F%2FM%2Fbd15d84f-af78-4045-b6d2-ebdd00feb10f/watermark:F/width:366?csig=AAAAAAAAAAAAAAAAAAAAAJVYqBbn8hxWwO9Jh60t-176oZ7L0OlqHDqEgUW89iL7&exp=1785319163&osig=AAAAAAAAAAAAAAAAAAAAAIExVhs_x3on6qQ18EpuF8sM6tQQnek_ACliZfhMdtsT&signer=media-rpc&x-canva-quality=thumbnail_large" alt="Project 2 Thumbnail">
+                    <h3>Project 2: Personal Development Reflection</h3>
+                    <p>A Personal Development reflection future photo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="POST">
+                
+                <!-- Input 1: Text -->
+                <div class="form-group">
+                    <label for="name">Full Name: Sofia Alexa Marinas Ciriaco</label>
+                    <input type="text" id="name" name="name" required placeholder="Sofia Ciriaco">
+                </div>
+
+                <!-- Input 2: Email -->
+                <div class="form-group">
+                    <label for="email">Email Address: 2025q0037@pwu.edu.ph</label>
+                    <input type="email" id="email" name="email" required placeholder="2025q0037@pwu.edu.ph">
+                </div>
+
+                <!-- Input 3: Date -->
+                <div class="form-group">
+                    <label for="appointment">Preferred Consultation Date: Aug 7, 2026</label>
+                    <input type="date" id="appointment" name="appointment">
+                </div>
+
+                <!-- Input 4: Radio / Checkbox -->
+                <div class="form-group">
+                    <label>Interests:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="webdev" name="interests" value="webdev">
+                        <label for="webdev" class="inline-label">Web Development</label>
+                        
+                        <input type="checkbox" id="design" name="interests" value="design">
+                        <label for="design" class="inline-label">UI/UX Design</label>
+                    </div>
+                </div>
+
+                <!-- Input 5: Color -->
+                <div class="form-group">
+                    <label for="theme">Preferred Theme Color: #purple</label>
+                    <input type="color" id="theme" name="theme" value="#800080">
+                </div>
+
+                <!-- Input 6: File -->
+                <div class="form-group">
+                    <label for="resume">Upload Resume</label>
+                    <input type="file" id="resume" name="resume">
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="form-buttons">
+                    <button type="submit">Submit Information</button>
+                    <button type="reset">Reset Form</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p> 2026 Sofia Ciriaco. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
