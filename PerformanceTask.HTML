@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PART 1: Title reflecting the student's name -->
+    <title>My Portfolio – Sofia Alexa M. Ciriaco</title>
+    
+    <style>
+        /* General Styles & Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333333;
+            background-color: #f9f9f9;
+        }
+        section {
+            padding: 90px 20px 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        /* PART 5: NAVIGATION BAR STYLING */
+        nav {
+            background-color: #2c3e50;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        /* Custom Portfolio Logo representing Sofia's initials */
+        .logo {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid #3498db;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #3498db;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* PART 1: HOME PAGE STYLING */
+        #home {
+            text-align: center;
+            padding-top: 150px;
+            min-height: 45vh;
+        }
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        #home p {
+            font-size: 1.2rem;
+            color: #555555;
+        }
+
+        /* PART 2: ABOUT ME STYLING */
+        .about-media {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .about-media img, .about-media video {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* PART 3: SKILLS & HOBBIES STYLING */
+        /* Custom Unordered List (Hobbies) */
+        ul.custom-hobbies {
+            list-style-type: square; /* Custom bullet type */
+            color: #3498db; /* Custom bullet color hierarchy */
+            padding-left: 20px;
+        }
+        ul.custom-hobbies li {
+            color: #333333; /* Text color remains standard */
+            margin-bottom: 8px;
+        }
+        /* Custom Ordered List (Skills) */
+        ol.custom-skills {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        ol.custom-skills li {
+            margin-bottom: 12px;
+        }
+        ol.custom-skills strong {
+            color: #2c3e50;
+        }
+
+        /* PART 4: EDUCATIONAL BACKGROUND TABLE STYLING */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 12px 15px;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* CONTACT SECTION STYLING */
+        #contact {
+            padding-bottom: 60px;
+        }
+        #contact p {
+            margin: 8px 0;
+        }
+        #contact a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        #contact a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        /* RESPONSIVE DESIGN RULES FOR MOBILE DEVICES */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .nav-links li {
+                margin: 0 10px;
+            }
+            #home h1 {
+                font-size: 2.2rem;
+            }
+            table {
+                font-size: 14px;
+            }
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- PART 5: NAVIGATION BAR                     -->
+    <!-- ========================================== -->
+    <nav>
+        <div class="nav-container">
+            <!-- Custom Portfolio Logo with Sofia's Initials -->
+            <a href="#home" class="logo">SAMC.</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#hobbies-skills">Hobbies &amp; Skills</a></li>
+                <li><a href="#education">Educational Background</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- PART 1: HOME PAGE SECTION                  -->
+    <!-- ========================================== -->
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hello! I am <strong>Sofia Alexa M. Ciriaco</strong>, a passionate ICT Senior High student and aspiring web developer creating clean and functional digital experiences.</p>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- PART 2: ABOUT ME SECTION                   -->
+    <!-- ========================================== -->
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>
+            Hello! My name is Sofia, and I am currently exploring the exciting world of technology. 
+            I have always been <strong>deeply fascinated by how websites are built</strong>, which sparked my journey into learning frontend development. 
+            <br><br> <!-- Proper line break for readability -->
+            Right now, my primary goal is to <em>master HTML, CSS, and JavaScript</em> to create impactful web applications. 
+            When I am not coding, you will likely find me researching <u>modern design trends</u> or practicing my problem-solving skills.
+            <br><hr><br> <!-- Horizontal rule and line breaks for layout structure -->
+            I believe that <i>continuous learning</i> is the key to success in this fast-paced digital era, and I am excited to see where this path takes me. 
+            Through dedication, I want to <b>build projects that make a difference</b>. Below, you can see a glimpse of my everyday workspace and environment.
+        </p>
+
+        <!-- Video and Pictures representing the section -->
+        <div class="about-media">
+            <!-- Updated placeholder path to valid URL template and matched alt attribute to your name -->
+            <img src="https://media.canva.com/v2/image-resize/format:JPG/height:550/quality:92/uri:ifs%3A%2F%2FM%2Fa579f63b-fe9d-4ede-b136-69020c314799/watermark:F/width:412?csig=AAAAAAAAAAAAAAAAAAAAADjUUhwikSgDyaQ4KhV_C2eAFdz2zD36qP0AvdOp-9lG&exp=1788607725&osig=AAAAAAAAAAAAAAAAAAAAAHcfXk-IPC5hL1YqXwAhUdU0EGSKKq2XO1TNCfsTS__U&signer=media-rpc&x-canva-quality=thumbnail_large" alt="Sofia Alexa Ciriaco's Profile Image">
+            <video controls>
+                <source src="https://canva.link/j0z8iqa8bl9jqhn" type="www.Canva.com">
+                My browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- PART 3: SKILLS & HOBBIES SECTION           -->
+    <!-- ========================================== -->
+    <section id="hobbies-skills">
+        <h2>Hobbies &amp; Skills</h2>
+        
+        <h3>My Hobbies</h3>
+        <!-- Unordered list customized via CSS (Square bullets) -->
+        <ul class="custom-hobbies">
+            <li>Coding and building mini web projects</li>
+            <li>Playing competitive strategy video games</li>
+            <li>Reading science fiction novels</li>
+            <li>Photography and photo editing</li>
+            <li>Playing the acoustic guitar</li>
+        </ul>
+
+        <h3>Top Skills</h3>
+        <!-- Ordered list using uppercase alphabet formatting (Fixed syntax cutoff error) -->
+        <ol class="custom-skills" type="A">
+            <li>
+                <strong>HTML5 &amp; Semantic Markup:</strong> 
+                Structuring web content cleanly and accurately for better accessibility and SEO performance.
+            </li>
+            <li>
+                <strong>CSS3 Styling &amp; Layouts:</strong> 
+                Designing visually appealing layouts using Flexbox, Grid, and responsive web principles.
+            </li>
+            <li>
+                <strong>UI/UX Prototyping:</strong> 
+                Creating interactive wireframes and design mockups using modern prototyping tools.
+            </li>
+            <li>
+                <strong>Problem Solving:</strong> 
+                Breaking down complex programmatic logic issues into small, solvable steps.
+            </li>
+            <li>
+                <strong>Time Management:</strong> 
+                Balancing academic deadlines with personal technical projects efficiently.
+                 
