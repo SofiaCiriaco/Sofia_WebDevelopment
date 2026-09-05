@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9</title>
+    <!-- FIXED: Correct Google Fonts link for Poppins -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        /* Base page styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* UPDATED: Aesthetic gradient background */
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #4a4a4a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+            min-height: 100vh;
+        }
+        /* Container to organize all the cards vertically */
+        .container {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px; /* Adds space between the boxes */
+        }
+        /* Aesthetic Text Box Card styling */
+        .card {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 16px; /* Smooth, rounded corners */
+            box-shadow: 0 10px 25px rgba(163, 177, 198, 0.2); /* Soft depth shadow */
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: transform 0.2s ease;
+        }
+        /* Subtle hover effect for the text boxes */
+        .card:hover {
+            transform: translateY(-2px);
+        }
+        /* Headings styling with soft aesthetic colors */
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #5c677d; /* Elegant slate color */
+            margin-top: 0;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+        /* Paragraph styling */
+        p, label {
+            font-size: 0.95rem;
+            color: #7d8597;
+            margin: 8px 0;
+        }
+        /* Output text styling */
+        #displayName, #output, #subjectOutput {
+            font-weight: 500;
+            color: #6c5ce7; /* Soft aesthetic purple for text updates */
+            margin-top: 10px;
+        }
+        /* Input field design */
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 15px 0;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            box-sizing: border-box;
+            background-color: #f8fafc;
+            color: #334155;
+            transition: all 0.3s ease;
+        }
+        /* Highlight border when clicking inside the input box */
+        input[type="text"]:focus, input[type="number"]:focus {
+            outline: none;
+            border-color: #a29bfe;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(162, 155, 254, 0.2);
+        }
+        /* Aesthetic Pastel Button design */
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #a29bfe, #6c5ce7); /* Soft pastel purple gradient */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 0.95rem;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(108, 92, 231, 0.2);
+            transition: all 0.2s ease;
+        }
+        /* Hover effect for buttons */
+        button:hover {
+            background: linear-gradient(135deg, #b2adff, #7d6eff);
+            box-shadow: 0 6px 14px rgba(108, 92, 231, 0.3);
+            transform: scale(1.01);
+        }
+        /* Active click effect for buttons */
+        button:active {
+            transform: scale(0.99);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Card 1: Name Section with Text Input -->
+        <div class="card">
+            <h2>Write Your Name</h2>
+            <label for="nameInput">Enter Name:</label>
+            <input type="text" id="nameInput" placeholder="e.g. John Doe">
+            <button onclick="clickMe()">Click It</button>
+            <p id="displayName"></p>
+        </div>
+
+        <!-- Card 2: Age Console Log Section -->
+        <div class="card">
+            <h2>Your Age</h2>
+            <p style="font-style: italic; font-size: 0.85rem;">Check your browser's console tab to view the output.</p>
+            <script>console.log("HELLO WORLD")</script>
+        </div>
+
+        <!-- Card 3: Subject Section with Text Input -->
+        <div class="card">
+            <h2>Favorite Subject to Study</h2>
+            <label for="subjectInput">Enter Subject:</label>
+            <input type="text" id="subjectInput" placeholder="e.g. Computer Science">
+            <button onclick="displaySubject()">Submit Subject</button>
+            <p id="subjectOutput"></p>
+        </div>
+
+        <!-- Card 4: innerHTML Dynamic Section -->
+        <div class="card">
+            <h2 id="sentence">This is for innerHTML</h2>
+            <button id="change" onclick="changeText()">click it!</button>
+        </div>
+
+        <!-- Card 5: Variable Declaration & Form Input Section -->
+        <div class="card">
+            <h2>Variable Declaration</h2>
+            <label for="age">Enter Age:</label>
+            <input type="number" id="age" placeholder="e.g. 21">
+            <button id="submit" onclick="submitForm()">Submit</button>
+            <p id="output"></p>
+        </div>
+    </div>
+
+    <!-- Links your external JavaScript file -->
+    <script src="Lesson9.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity: Color Picker</title>
+    <style>
+        /* --- Clean, Modern Layout --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 20px;
+            letter-spacing: 0.5px;
+            color: #e2e8f0;
+        }
+
+        /* --- Dynamic Display Box --- */
+        #colorBox {
+            width: 100%;
+            height: 200px;
+            background-color: #64748b; /* Default Gray color */
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.4s ease, transform 0.3s ease;
+        }
+
+        /* --- Button Control Configuration --- */
+        .button-group {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 10px 14px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            color: #ffffff;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.15);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* Unique button identification backgrounds */
+        .btn-yellow { background-color: #eab308; color: #000000; }
+        .btn-red    { background-color: #ef4444; }
+        .btn-blue   { background-color: #3b82f6; }
+        .btn-green  { background-color: #22c55e; }
+        .btn-gray   { background-color: #64748b; }
+        .btn-purple { background-color: #c264e7; }
+        .btn-cyan   { background-color: #1aebfa; }
+        .btn-indigo { background-color: #5a5ce2; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>8 CHANGING COLORS USING BUTTON</h2>
+        
+        <!-- The Target Element to change colors -->
+        <div id="colorBox"></div>
+
+        <!-- The 8 Functional Control Buttons -->
+        <div class="button-group">
+            <button class="btn-yellow" onclick="changeColor('#eab308')">Yellow</button>
+            <button class="btn-red"    onclick="changeColor('#ef4444')">Red</button>
+            <button class="btn-blue"   onclick="changeColor('#3b82f6')">Blue</button>
+            <button class="btn-green"  onclick="changeColor('#22c55e')">Green</button>
+            <button class="btn-gray"   onclick="changeColor('#64748b')">Gray</button>
+            <button class="btn-cyan"   onclick="changeColor('#1aebfa')">Cyan</button>
+            <button class="btn-indigo" onclick="changeColor('#5a5ce2')">Indigo</button>
+            <button class="btn-purple" onclick="changeColor('#c264e7')">Purple</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic Structure -->
+    <script>
+        // Single optimized function handling all background color adjustments
+        function changeColor(hexColor) {
+            const box = document.getElementById("colorBox");
+            box.style.backgroundColor = hexColor;
+        }
+    </script>
+
+</body>
+</html>
