@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Hyperlinks Practical Example</title>
+</head>
+<body>
+
+    <!-- Block Tag: Heading -->
+    <h1>Food & Tech Navigation Guide</h1>
+    
+    <!-- Block Tag: Paragraph containing an inline text link -->
+    <p>Welcome to our workspace! You can easily explore your favorite services using the links below.</p>
+
+    <!-- SECTION 1: Absolute URLs (External Sites) -->
+    <h2>1. External Brands (Absolute URLs)</h2>
+    <ul>
+        <!-- Opens in a new tab (_blank) and provides a helpful hover tooltip (title) -->
+        <li>
+            <a href="https://www.youtube.com/" title="Watch cooking videos on YouTube">
+                Go to YouTube
+            </a>
+        </a></li>
+        <li>
+            <a href="https://amazon.com" target="_blank" title="Shop cooking supplies on Amazon">
+                Shop on Amazon
+            </a>
+        </li>
+    </ul>
+
+    <!-- SECTION 2: Relative URLs (Internal Project Navigation) -->
+    <h2>2. Internal Pages (Relative URLs)</h2>
+    <p>Use these paths to navigate your local website directories:</p>
+    <nav>
+        <!-- Links to files located within your same project folder -->
+        <a href="about.html" title="Learn more about our team">About Us</a> | 
+        <a href="contact.html" title="Get our office location details">Contact Page</a>
+    </nav>
+
+    <!-- SECTION 3: Email Triggers (mailto:) -->
+    <h2>3. Customer Support</h2>
+    <p>Have inquiries? Direct them instantly to our team:</p>
+    <!-- Triggers the default user device email application -->
+    <a href="mailto:timedoor@gmail.com" title="Draft an email to support">
+        Email Support Team
+    </a>
+
+    <!-- SECTION 4: Clickable Image Link (Hands-on Challenge) -->
+    <h2>4. Interactive Image Banner</h2>
+    <p>Click the image below to jump directly to the menu site:</p>
+    
+    <!-- Inline styles are applied here to clean up border behaviors -->
+    <a href="https://mcdonalds.co.id" target="_blank" title="View the official McDonald's Indonesia Menu">
+        <img src="Favorite Foods.jpg" alt="A spread of favorite dishes" style="width:300px; height:auto; border-radius:8px;">
+    </a>
+
+</body>
+</html>
