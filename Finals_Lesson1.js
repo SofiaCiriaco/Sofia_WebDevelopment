@@ -1,30 +1,36 @@
-let num1 = 20;
-let num2 = 5;
+// Source - https://stackoverflow.com/q/27111342
+// Posted by a contributor; modified by community. See the post 'Timeline' for change history.
+// Retrieved 2026-09-30, License - CC BY-SA 3.0
 
-function add(x, y){
-    return x+y;
+function showResult(choice){
+var n1=parseFloat(document.getElementById('num1').value);
+var n2=parseFloat(document.getElementById('num2').value);
+var r;
+var c=choice;
 
-}
+switch(c)
+	{
+	case '1':
+		r=n1+n2;
+		break;
+	case '2':
+		r=n1-n2;
+		break;
+	case '3':
+		r=n1*n2;
+		break;
+	case '4': 
+		r=n1/n2;
+		break;
+	case '5':
+		r=n2*100/n1;
+		break;
+	default:
+		break;
+			
+	}
+document.getElementById('result').innerHTML=r;
 
-function subtract(x, y){
-    return x-y;
-}
+	
 
-function multiply(x, y){
-    return x*y;
-}
-
-function divide(x, y){
-    if (y === 0) {
-        return "Error: Division by zero is not allowed.";
-    }
-    return x / y;
-}
-
-function performCalculations() {
-
-document.getElementById("add").innerHTML = "Addition: " + add(num1, num2);
-document.getElementById("subtract").innerHTML = "Subtraction: " + subtract(num1, num2);
-document.getElementById("multiply").innerHTML = "Multiplication: " + multiply(num1, num2);
-document.getElementById("divide").innerHTML = "Division: " + divide(num1, num2);
 }

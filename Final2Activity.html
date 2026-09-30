@@ -1,148 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Document</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <style>
+
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #4a4a4a;
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            padding: 40px 20px;
-            margin: 0;
             min-height: 100vh;
+            margin: 0;
         }
+
         .container {
-            width: 100%;
-            max-width: 500px;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-        .card {
-            background-color: #ffffff;
+            background-color: white;
             padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(163, 177, 198, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            transition: transform 0.2s ease;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
         }
-        .card:hover {
-            transform: translateY(-2px);
+
+        h2, h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
         }
-        h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #5c677d;
-            margin-top: 0;
-            margin-bottom: 12px;
-            letter-spacing: -0.3px;
+
+        .form-group {
+            margin-bottom: 15px;
         }
-        p, label {
-            font-size: 0.95rem;
-            color: #7d8597;
-            margin: 8px 0;
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
         }
-        #displayName, #output, #subjectOutput {
-            font-weight: 500;
-            color: #6c5ce7;
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border: 1px solid #bbb;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.2s;
             margin-top: 10px;
         }
 
-        input[type="text"], input[type="number"] {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0 15px 0;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.9rem;
-            box-sizing: border-box;
-            background-color: #f8fafc;
-            color: #334155;
-            transition: all 0.3s ease;
-        }
-        input[type="text"]:focus, input[type="number"]:focus {
-            outline: none;
-            border-color: #a29bfe;
-            background-color: #ffffff;
-            box-shadow: 0 0 0 3px rgba(162, 155, 254, 0.2);
-        }
-        button {
-            width: 100%;
-            padding: 12px;
-            background: linear-gradient(135deg, #a29bfe, #6c5ce7);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-            font-size: 0.95rem;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(108, 92, 231, 0.2);
-            transition: all 0.2s ease;
-        }
         button:hover {
-            background: linear-gradient(135deg, #b2adff, #7d6eff);
-            box-shadow: 0 6px 14px rgba(108, 92, 231, 0.3);
-            transform: scale(1.01);
+            background-color: #d4d4d4;
         }
-        button:active {
-            transform: scale(0.99);
+
+        .result-box {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 2px solid #ddd;
+            display: none;
         }
-        #submit {
-            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-        }
-        #studentDetails {
-            background-color: #f0f4f8;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(163, 177, 198, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            margin-top: 20px;
+
+        .result-box p {
+            margin: 8px 0;
+            font-size: 14px;
+            color: #444;
         }
     </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="card">
-            <h2>Student Name</h2>
-            <label for="nameInput">Enter Name:</label>
-            <input type="text" id="nameInput" placeholder="e.g. Sofia Alexa Ciriaco">
-            <p id="displayName"></p>
-        </div>
-        <div class="card">
-            <h2>ID Number:</h2>
-            <label for="idInput">Enter ID:</label>
-            <input type="text" id="idInput" placeholder="e.g. 2025q0037">
-        </div>
-        <div class="card">
-            <h2>Grade and Section:</h2>
-            <label for="gradeInput">Enter Grade:</label>
-            <input type="number" id="gradeInput" placeholder="e.g. 12">
-            <label for="sectionInput">Enter Section:</label>
-            <input type="text" id="sectionInput" placeholder="e.g. Aquinas">
-        </div>         
-        <div class="card">
-            <h2>Age:</h2>
-            <label for="ageInput">Enter Age:</label>
-            <input type="number" id="ageInput" placeholder="e.g. 17">
-            <p style="font-style: italic; font-size: 0.85rem;"></p>
-            <script>console.log("HELLO WORLD")</script>
-        </div> 
-        <div class="card">
-            <h2>Email:</h2>
-            <label for="emailInput">Enter Email:</label>
-            <input type="email" id="emailInput" placeholder="e.g. 2025q0037@pwu.edu.ph">
-            <button id="submit" onclick="submitForm()">Submit</button>
-            <p id="output"></p>
+</head>
+<body>
 
-    <br>
+    <div class="container">
+        <h2>Student Information</h2>
+        <form id="studentForm">
+            <div class="form-group">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" value="Sofia Alexa Ciriaco" required>
+            </div>
+
+            <div class="form-group">
+                <label for="idNumber">ID Number:</label>
+                <input type="text" id="idNumber" value="2025Q0037" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gradeSection">Grade and Section:</label>
+                <input type="text" id="gradeSection" value="12-Aquinas" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" value="17" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="2025q0037@pwu.edu.ph" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="result-box" id="resultBox">
+            <h3>Student Details</h3>
+            <p><strong>Name:</strong> <span id="Name"></span></p>
+            <p><strong>ID No:</strong> <span id="ID"></span></p>
+            <p><strong>Class:</strong> <span id="Class"></span></p>
+            <p><strong>Age:</strong> <span id="Age"></span></p>
+            <p><strong>Email:</strong> <span id="Email"></span></p>
         </div>
-    </body>
     <script src="FinalActivity2.js"></script>
+</body>
 </html>
