@@ -25,7 +25,7 @@ resultDisplay.style.color = result === "You win! 😎;"
 : result === "You lose! 😢" 
 ? "red" 
 : "black";
-resultDisplay.style.border = "2px sold transparent";
+resultDisplay.style.border = "2px solid transparent";
 resultDisplay.style.color = "White";
 
 }
